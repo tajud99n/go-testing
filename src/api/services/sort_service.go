@@ -5,5 +5,9 @@ import (
 )
 
 func Sort(elements []int) {
-	sort.BubbleSort(elements)
+	if len(elements) < 10000  {
+		sort.BubbleSort(elements)
+		return
+	}
+	sort.Sort(elements)
 }
